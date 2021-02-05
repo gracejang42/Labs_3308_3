@@ -4,4 +4,4 @@ This is the Github repository for Lab 3
 Grace Horton
 Mark Davis
 Sean Fitze
-Ethan Bauer
+Ethan S Bauer
