@@ -1,0 +1,113 @@
+GRACE HORTON LAB_1 SECTION 2 
+
+Initial terminal View:
+docker run -d -p 80:80 docker/getting-started
+The default interactive shell is now zsh.
+To update your account to use zsh, please run `chsh -s /bin/zsh`.
+For more details, please visit https://support.apple.com/kb/HT208050.
+(base) Graces-MacBook-Air:~ gracehorton$ docker run -d -p 80:80 docker/getting-started
+Unable to find image 'docker/getting-started:latest' locally
+latest: Pulling from docker/getting-started
+188c0c94c7c5: Pull complete 
+617561f33ec6: Pull complete 
+7d856acdaa9c: Pull complete 
+a0d3c6e28e6d: Pull complete 
+af69a9b963c8: Pull complete 
+0739f3815ad8: Pull complete 
+7c7b75d0baf8: Pull complete 
+Digest: sha256:b821569034e3b5fae03b40e64a866017067f3bf17effe185b782bdbf02179528
+Status: Downloaded newer image for docker/getting-started:latest
+a8712140fa25f235b9df205593782f25d3e5c6a8af082740d08316637ed9c04f
+(base) Graces-MacBook-Air:~ gracehorton$ docker run hello-world
+Unable to find image 'hello-world:latest' locally
+latest: Pulling from library/hello-world
+0e03bdcc26d7: Pull complete 
+Digest: sha256:31b9c7d48790f0d8c50ab433d9c3b7e17666d6993084c002c2ff1ca09b96391d
+Status: Downloaded newer image for hello-world:latest
+
+1)
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+2)
+
+(base) Graces-MacBook-Air:~ gracehorton$ docker ps -a
+CONTAINER ID   IMAGE                    COMMAND                  CREATED          STATUS                      PORTS                NAMES
+768d080e8244   hello-world              "/hello"                 46 seconds ago   Exited (0) 45 seconds ago                        exciting_elion
+a8712140fa25   docker/getting-started   "/docker-entrypoint.…"   3 minutes ago    Up 3 minutes                0.0.0.0:80->80/tcp   quirky_gould
+
+3)
+(base) Graces-MacBook-Air:~ gracehorton$ docker rm exciting_elion
+exciting_elion
+(base) Graces-MacBook-Air:~ gracehorton$ docker ps -a
+CONTAINER ID   IMAGE                    COMMAND                  CREATED         STATUS         PORTS                NAMES
+a8712140fa25   docker/getting-started   "/docker-entrypoint.…"   8 minutes ago   Up 8 minutes   0.0.0.0:80->80/tcp   quirky_gould
+
+4)
+(base) Graces-MacBook-Air:~ gracehorton$ docker run --rm hello-world
+
+Hello from Docker!
+This message shows that your installation appears to be working correctly.
+
+To generate this message, Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon.
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+
+To try something more ambitious, you can run an Ubuntu container with:
+ $ docker run -it ubuntu bash
+
+Share images, automate workflows, and more with a free Docker ID:
+ https://hub.docker.com/
+
+For more examples and ideas, visit:
+ https://docs.docker.com/get-started/
+
+5.1)
+(base) Graces-MacBook-Air:~ gracehorton$ docker run -it ubuntu bash
+Unable to find image 'ubuntu:latest' locally
+latest: Pulling from library/ubuntu
+83ee3a23efb7: Pull complete 
+db98fc6f11f0: Pull complete 
+f611acd52c6c: Pull complete 
+Digest: sha256:703218c0465075f4425e58fac086e09e1de5c340b12976ab9eb8ad26615c3715
+Status: Downloaded newer image for ubuntu:latest
+[root@831361c9f3f9:/# exit
+exit
+
+5.2)
+[(base) Graces-MacBook-Air:~ gracehorton$ 
+(base) Graces-MacBook-Air:~ gracehorton$ docker run -dt ubuntu bash
+bbe9332288d4c655962d64d059e77671c4c5efa7594ba3d2ace670afc6872b09
+[(base) Graces-MacBook-Air:~ gracehorton$ docker ps
+CONTAINER ID   IMAGE                    COMMAND                  CREATED              STATUS              PORTS                NAMES
+bbe9332288d4   ubuntu                   "bash"                   About a minute ago   Up About a minute                        distracted_leakey
+a8712140fa25   docker/getting-started   "/docker-entrypoint.…"   22 minutes ago       Up 22 minutes       0.0.0.0:80->80/tcp   quirky_gould
+(base) Graces-MacBook-Air:~ gracehorton$ docker rm quirky_gould
+Error response from daemon: You cannot remove a running container a8712140fa25f235b9df205593782f25d3e5c6a8af082740d08316637ed9c04f. Stop the container before attempting removal or force remove
+(base) Graces-MacBook-Air:~ gracehorton$ docker rm -f quirky_gould
+quirky_gould
+(base) Graces-MacBook-Air:~ gracehorton$ 
