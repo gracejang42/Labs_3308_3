@@ -1,0 +1,22 @@
+Section 3: 
+
+11)
+(base) Graces-MacBook-Air:~ gracehorton$ cd GraceHorton_024_Labs
+(base) Graces-MacBook-Air:GraceHorton_024_Labs gracehorton$ git add test.txt
+fatal: pathspec 'test.txt' did not match any files
+(base) Graces-MacBook-Air:GraceHorton_024_Labs gracehorton$ vi test.txt
+(base) Graces-MacBook-Air:GraceHorton_024_Labs gracehorton$ git add test.txt
+(base) Graces-MacBook-Air:GraceHorton_024_Labs gracehorton$ git commit -m "first commit"
+[main 48aedf1] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test.txt
+(base) Graces-MacBook-Air:GraceHorton_024_Labs gracehorton$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 290 bytes | 290.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/CSCI-3308-CU-Boulder/GraceHorton_024_Labs.git
+   3f9fb89..48aedf1  main -> main
+(base) Graces-MacBook-Air:GraceHorton_024_Labs gracehorton$ 
