@@ -1,0 +1,72 @@
+Lab #6 Take Home
+Your name: Grace Horton
+
+
+---------------------------------------- Question 1 Query ---------------------------------------- 
+
+										put query here
+select ship_city,COUNT(*) from orders GROUP BY (ship_city) ORDER BY COUNT(*) DESC limit 1; 
+
+---------------------------------------- Question 1 Results ---------------------------------------- 					
+
+										put result here	(output of the table)	
+
+ ship_city    | count 
+----------------+-------
+ Rio de Janeiro |    34
+(1 row)
+
+---------------------------------------- Question 2 Query ---------------------------------------- 
+
+										put query here
+
+  not enough time
+  
+
+---------------------------------------- Question 2 Results ---------------------------------------- 					
+
+										put result here	(output of the table)	
+
+---------------------------------------- Question 3 Query ---------------------------------------- 
+
+										put query here
+not enough time
+
+---------------------------------------- Question 3 Results ---------------------------------------- 					
+
+										put result here	(output of the table)	
+
+---------------------------------------- Question 4 Query ---------------------------------------- 
+
+										put query here
+  
+SELECT categories.category_name, COUNT(products.product_id) as "Products" FROM categories INNER JOIN products ON categories.category_id = products.category_id GROUP BY categories.category_name ORDER BY COUNT(*) DESC limit 5;
+
+  
+
+---------------------------------------- Question 4 Results ---------------------------------------- 					
+
+										put result here	(output of the table)	
+
+ category_name  | count 
+----------------+-------
+ Confections    |    13
+ Condiments     |    12
+ Beverages      |    12
+ Seafood        |    12
+ Dairy Products |    10
+(5 rows)
+
+
+
+---------------------------------------- Question 5 Query ---------------------------------------- 
+
+										put query here
+
+not enough time
+  
+
+---------------------------------------- Question 5 Results ---------------------------------------- 					
+
+										put result here	(output of the table)	
+
