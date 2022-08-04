@@ -1,4 +1,4 @@
-This is the Github repository for Grace's Labs from Software Development: Methods and Applications 
+# This is the Github repository for Grace's Labs from Software Development: Methods and Applications 
 
 Lab 3: 
 Grace Horton// 2nd edit
